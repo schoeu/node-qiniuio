@@ -16,51 +16,24 @@ var qiniu_conf = {
 };
 
 /**
- * 合并对象
- * */
-function extend() {
-    var idx = 0;
-    var deep = false;
-    var temp = {};
-    var tar = arguments[idx] || {};
-    if (typeof arguments[idx] === 'boolean') {
-        tar = arguments[++idx];
-        deep = arguments[idx];
-    }
-
-    while(temp = arguments[++idx]) {
-        if ($.isPlainObject(temp)) {
-            for (var i in temp) {
-                var item = temp[i];
-                if (deep) {
-                    tar[i] = item;
-                }
-                else if (tar[i] === undefined){
-                    tar[i] = item;
-                }
-            }
-        }
-    }
-    return tar;
-}
-
-/**
  * 暴露config接口给用户
  * @param {Object} obj 配置的对象
  * */
 function setConfig(obj){
-    if ('object' === typeof obj) {
+    if ('object' !== typeof obj) {
         throw new Error('please input valid config object.');
     }
 
-    extend(qiniu_conf, obj);
+    Object.assign(qiniu_conf, obj);
+    qiniu.qiniu_conf = qiniu_conf;
 }
 
 module.exports = {
-    getFileInfo: getFileInfo(qiniu, qiniu_conf),
-    upload: upload(qiniu, qiniu_conf),
-    uploadCb: uploadCb(qiniu, qiniu_conf),
-    download: download(qiniu, qiniu_conf)
+    getFileInfo: getFileInfo(qiniu),
+    upload: upload(qiniu),
+    uploadCb: uploadCb(qiniu),
+    download: download(qiniu),
+    config: setConfig
 };
 
 
