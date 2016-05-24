@@ -1,6 +1,6 @@
 {
-  "name": "node_qiniuio",
-  "version": "0.0.1",
+  "name": "node-qiniuio",
+  "version": "0.0.2",
   "description": "Io lib for qiniu cdn",
   "main": "index.js",
   "scripts": {
@@ -8,15 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/schoeu/node-qiniuIO.git"
+    "url": "git+https://github.com/schoeu/node-qiniuio.git"
   },
   "keywords": [
-    "qiniu"
+    "qiniu",
+    "node-qiniu",
+    "qiniu io"
   ],
   "author": "schoeu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/schoeu/node-qiniuIO/issues"
+    "url": "https://github.com/schoeu/node-qiniuio/issues"
   },
-  "homepage": "https://github.com/schoeu/node-qiniuIO#readme"
+  "homepage": "https://github.com/schoeu/node-qiniuio#readme"
 }
