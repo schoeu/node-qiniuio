@@ -1,0 +1,7 @@
+{
+    "ACCESS_KEY" : "uz13psbg6W0xxxxxe5ts4xLlcfwWojxGS2HfcBNG",
+    "SECRET_KEY" : "ikoCEy2xxxxxx5tkOTEigLyoAYqTvoujS_YTCKi2",
+    "BUCKET_NAME": "xx",
+    "CALLBACK_URL": "http://xx/login/callback",
+    "DOMAIN": "http://xx.xx.com/"
+}
