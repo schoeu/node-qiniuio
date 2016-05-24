@@ -1,6 +1,6 @@
 {
   "name": "node-qiniuio",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Io lib for qiniu cdn",
   "main": "index.js",
   "scripts": {
@@ -15,6 +15,11 @@
     "node-qiniu",
     "qiniu io"
   ],
+  "dependencies": {
+    "qiniu" : ">=6.1.9"
+  },
+  "devDependencies":{
+  },
   "author": "schoeu",
   "license": "MIT",
   "bugs": {
