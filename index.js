@@ -1,6 +1,6 @@
 /**
  * node-qiniuio入口文件
- * **/
+ * */
 
 var qiniu = require("qiniu");
 var getFileInfo = require('./lib/qiniu_getfileinfo');
