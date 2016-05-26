@@ -7,6 +7,14 @@ var getFileInfo = require('./lib/qiniu_getfileinfo');
 var uploadCb = require('./lib/qiniu_upload_cb');
 var download = require('./lib/qiniu_download');
 var upload = require('./lib/quniu_upload');
+
+/**
+ * ACCESS_KEY: 访问密钥
+ * SECRET_KEY: 密钥
+ * BUCKET_NAME: 空间名称
+ * CALLBACK_URL: 上传使用的回调URL
+ * DOMAIN: qiniu空间域名
+ * */
 var qiniu_conf = {
     "ACCESS_KEY" : "",
     "SECRET_KEY" : "",
