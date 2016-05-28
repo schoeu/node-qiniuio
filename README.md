@@ -142,13 +142,11 @@ qiniuio.uploadCb('filename.png',filepath, function (rs){
 ``` javascript
 // 引入node-qiniuio模块
 var qiniuio = require('node-qiniuio');
-var filepath = '/Users/schoeu/Downloads/svn/test';
 
 qiniuio.config({
   "ACCESS_KEY" : "your_access_key",
   "SECRET_KEY" : "your_secret_key",
-  "BUCKET_NAME": "your_bucket_name",
-  "CALLBACK_URL": "http://youdomain/callback",
+  "BUCKET_NAME": "your_bucket_name"
 });
 
 /**
@@ -157,6 +155,106 @@ qiniuio.config({
  * @return {String} download URL
  */
 var downloadUrl = qiniuio.download('filename.png');
+
+```
+
+### copy
+
+
+``` javascript
+// 引入node-qiniuio模块
+var qiniuio = require('node-qiniuio');
+
+qiniuio.config({
+  "ACCESS_KEY" : "your_access_key",
+  "SECRET_KEY" : "your_secret_key",
+  "BUCKET_NAME": "your_bucket_name"
+});
+
+/**
+ * @param {String} key 需要移动文件的文件名
+ * @param {String} dstbucket 目标空间名
+ * @return {String} dstkey 目标文件名
+ * @return {Function} callback 成功回调,可选
+ * @return {Function} fail 失败回调,可选
+ */
+qiniuio.copy('filename.png', 'otherbucket', filename1.png, success, fail);
+
+// 成功回调 可选
+function success(rs){
+    // 复制成功后文件信息对象
+}
+
+// 失败回调 可选
+function fail(err){
+    // err 错误对象
+}
+
+```
+
+### delete
+
+
+``` javascript
+// 引入node-qiniuio模块
+var qiniuio = require('node-qiniuio');
+
+qiniuio.config({
+  "ACCESS_KEY" : "your_access_key",
+  "SECRET_KEY" : "your_secret_key",
+  "BUCKET_NAME": "your_bucket_name"
+});
+
+/**
+ * @param {String} key 需要删除的文件名
+ * @return {Function} callback 成功回调
+ * @return {Function} fail 失败回调
+ */
+qiniuio.delete('filename.png', success, fail);
+
+// 成功回调 可选
+function success(rs){
+    // 删除成功后文件信息对象
+}
+
+// 失败回调 可选
+function fail(err){
+    // err 错误对象
+}
+
+```
+
+### move
+
+
+``` javascript
+// 引入node-qiniuio模块
+var qiniuio = require('node-qiniuio');
+
+qiniuio.config({
+  "ACCESS_KEY" : "your_access_key",
+  "SECRET_KEY" : "your_secret_key",
+  "BUCKET_NAME": "your_bucket_name"
+});
+
+/**
+ * @param {String} key 需要移动文件的文件名
+ * @param {String} dstbucket 目标空间名
+ * @return {String} dstkey 目标文件名
+ * @return {Function} callback 成功回调,可选
+ * @return {Function} fail 失败回调,可选
+ */
+qiniuio.move('filename.png', 'otherbucket', filename1.png, success, fail);
+
+// 成功回调 可选
+function success(rs){
+    // 移动成功后文件信息对象
+}
+
+// 失败回调 可选
+function fail(err){
+    // err 错误对象
+}
 
 ```
 
