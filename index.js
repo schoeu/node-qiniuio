@@ -7,6 +7,9 @@ var getFileInfo = require('./lib/qiniu_getfileinfo');
 var uploadCb = require('./lib/qiniu_upload_cb');
 var download = require('./lib/qiniu_download');
 var upload = require('./lib/quniu_upload');
+var copy = require('./lib/quniu_copy');
+var qnDelete = require('./lib/quniu_delete');
+var move = require('./lib/quniu_move');
 
 /**
  * ACCESS_KEY: 访问密钥
@@ -41,6 +44,9 @@ module.exports = {
     upload: upload(qiniu),
     uploadCb: uploadCb(qiniu),
     download: download(qiniu),
+    copy: copy(qiniu),
+    qnDelete: qnDelete(qiniu),
+    move: move(qiniu),
     config: setConfig
 };
 
