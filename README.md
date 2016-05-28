@@ -152,18 +152,11 @@ qiniuio.config({
 });
 
 /**
- * @param key {String} 上传后的文件名
- * @param filePath {String} 上传文件的本地路径
- * @param callback {Function} 成功后的回调
- * @param fail {Function} 执行失败后的回调
- * @return {Undefined}
+ * @param {String} url 保存在空间的文件名
+ * @param {String} flag 是否返回相对路径
+ * @return {String} download URL
  */
-
-qiniuio.uploadCb('filename.png',filepath, function (rs){
-    // rs为文件上传成功后信息
-}, function (err){
-    // 上传失败后回调,可选.err为错误对象
-});
+var downloadUrl = qiniuio.download('filename.png');
 
 ```
 
