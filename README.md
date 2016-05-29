@@ -154,7 +154,12 @@ qiniuio.config({
  * @param {String} flag 是否返回相对路径
  * @return {String} download URL
  */
-var downloadUrl = qiniuio.download('filename.png');
+
+// return "path/xxxx.png"
+// var downloadUrl = qiniuio.download('filename.png');
+
+// return "youdomain.com/path/xxxx.png"
+var downloadUrl = qiniuio.download('filename.png', false);
 
 ```
 

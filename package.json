@@ -1,7 +1,7 @@
 {
   "name": "node-qiniuio",
-  "version": "1.1.1",
-  "description": "Io lib for qiniu cdn",
+  "version": "1.1.3",
+  "description": "IO lib for qiniu cdn",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +13,9 @@
   "keywords": [
     "qiniu",
     "node-qiniu",
-    "qiniu io"
+    "qiniu io",
+    "io",
+    "7niu"
   ],
   "dependencies": {
     "qiniu" : ">=6.1.9"
